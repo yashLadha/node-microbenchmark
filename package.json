@@ -1,0 +1,19 @@
+{
+  "name": "node-bench",
+  "version": "1.0.0",
+  "description": "NodeJS microbenchmarking library",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "yashLadha",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^6.8.0"
+  },
+  "dependencies": {
+    "chalk": "^4.0.0",
+    "chalk-table": "^1.0.2"
+  }
+}
