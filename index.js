@@ -63,7 +63,7 @@ const show = () => {
       { field: 'ns', name: chalk.yellow('nano seconds') },
       { field: 'ms', name: chalk.blue('milli seconds') },
     ]
-  }
+  };
   console.log(`${chalk.cyan('Iterations')}: ${iterations}`);
   console.log(chalkTable(options, represent));
 };

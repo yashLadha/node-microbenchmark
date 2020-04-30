@@ -1,7 +1,7 @@
 {
   "name": "node-bench",
   "version": "1.0.0",
-  "description": "NodeJS microbenchmarking library",
+  "description": "NodeJS micro benchmarking library",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
