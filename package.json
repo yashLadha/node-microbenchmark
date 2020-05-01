@@ -1,5 +1,5 @@
 {
-  "name": "node-bench",
+  "name": "node-microbenchmark",
   "version": "0.0.1",
   "description": "NodeJS micro benchmarking library",
   "main": "index.js",

@@ -1,5 +1,7 @@
 ## node-bench
 
+[![npm version](https://badge.fury.io/js/node-microbenchmark.svg)](https://badge.fury.io/js/node-microbenchmark)
+
 A micro benchmarking library inspired from [google-benchmark](https://github.com/google/benchmark)
 
 Features available:
@@ -7,7 +9,7 @@ Features available:
     * High precision benchmakr (upto nanoseconds precision)
 
 ```javascript
-const { benchmark, show } = require('node-bench');
+const { benchmark, show } = require('node-microbenchmark');
 
 const slowFn = () => {
     for (var i = 0; i < 1e4; ++i);
