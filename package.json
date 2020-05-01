@@ -1,12 +1,17 @@
 {
   "name": "node-bench",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "NodeJS micro benchmarking library",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
+  "keywords": [
+    "benchmarking",
+    "micro benchmark",
+    "node-bench",
+    "yashLadha"
+  ],
   "author": "yashLadha",
   "license": "ISC",
   "devDependencies": {

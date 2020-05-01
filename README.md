@@ -7,6 +7,8 @@ Features available:
     * High precision benchmakr (upto nanoseconds precision)
 
 ```javascript
+const { benchmark, show } = require('node-bench');
+
 const slowFn = () => {
     for (var i = 0; i < 1e4; ++i);
 }
