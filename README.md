@@ -1,12 +1,13 @@
-## node-bench
+## node-microbenchmark
+<img src="https://img.icons8.com/color/48/000000/nodejs.png"/>
 
 [![npm version](https://badge.fury.io/js/node-microbenchmark.svg)](https://badge.fury.io/js/node-microbenchmark)
 
 A micro benchmarking library inspired from [google-benchmark](https://github.com/google/benchmark)
 
 Features available:
-    * Benchmarking synchronous functions
-    * High precision benchmakr (upto nanoseconds precision)
+* Benchmarking synchronous functions
+* High precision benchmakr (upto nanoseconds precision)
 
 ```javascript
 const { benchmark, show } = require('node-microbenchmark');
