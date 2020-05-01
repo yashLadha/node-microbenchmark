@@ -7,7 +7,7 @@ A micro benchmarking library inspired from [google-benchmark](https://github.com
 
 Features available:
 * Benchmarking synchronous functions
-* High precision benchmakr (upto nanoseconds precision)
+* High precision benchmark (upto nanoseconds precision)
 
 ```javascript
 const { benchmark, show } = require('node-microbenchmark');
