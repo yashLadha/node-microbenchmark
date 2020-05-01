@@ -24,6 +24,8 @@ benchmark(fastFn);
 show();
 ```
 
+![node-microbenchmark](./images/node-microbenchmark.png)
+
 ## Future enhancements
 
 * Benchmark async code like promises.
