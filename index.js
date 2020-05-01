@@ -1,5 +1,6 @@
 const chalk = require('chalk');
 const chalkTable = require('chalk-table');
+const { determineInference } = require('./inference');
 
 const getNano = (ar) => ar[0] * 1e9 + ar[1];
 
@@ -56,12 +57,14 @@ const show = () => {
       ns: results[key].average,
       ms: results[key].average / 1e6
     }));
+  determineInference(represent);
   const options = {
      leftPad: 2,
     columns: [
       { field: 'name', name: chalk.green('Name') },
       { field: 'ns', name: chalk.yellow('nano seconds') },
       { field: 'ms', name: chalk.blue('milli seconds') },
+      { field: 'slowerBy', name: chalk.red('Slower by') },
     ]
   };
   console.log(`${chalk.cyan('Iterations')}: ${iterations}`);
