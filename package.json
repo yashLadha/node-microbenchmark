@@ -1,6 +1,6 @@
 {
   "name": "node-microbenchmark",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "NodeJS micro benchmarking library",
   "main": "index.js",
   "scripts": {
