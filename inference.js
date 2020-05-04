@@ -1,7 +1,5 @@
 const sorter = (first, second) => {
-  if (first.ns < second.ns)
-    return -1;
-  return 1;
+  return first.ns - second.ns;
 };
 
 const determineInference = results => {
