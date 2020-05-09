@@ -26,7 +26,7 @@ function benchMark(func) {
     const result = runner(func, args);
     accumulator.push(result);
   }
-};
+}
 
 const calculate = () => {
   const functions = new Set(accumulator.map(el => el.name));
