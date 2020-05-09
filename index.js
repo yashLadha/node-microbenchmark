@@ -4,9 +4,9 @@ const { determineInference } = require('./inference');
 
 const getNano = (ar) => ar[0] * 1e9 + ar[1];
 
-const runner = (func) => {
+const runner = (func, args) => {
   const init = getNano(process.hrtime());
-  func();
+  func.apply(null, args);
   const ending = getNano(process.hrtime());
   return {
     name: func.name,
@@ -18,9 +18,12 @@ const runner = (func) => {
 let accumulator = [];
 const iterations = Date.now() % 1000;
 
-const benchMark = (func) => {
+function benchMark(func) {
+  const args = [];
+  for (var it = 1; it < arguments.length; ++it)
+    args.push(arguments[it]);
   for(var idx = 0; idx < iterations; ++idx) {
-    const result = runner(func);
+    const result = runner(func, args);
     accumulator.push(result);
   }
 };
