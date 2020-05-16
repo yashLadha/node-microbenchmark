@@ -7,8 +7,11 @@ A micro benchmarking library inspired from [google-benchmark](https://github.com
 
 Features available:
 * Benchmarking synchronous functions
+* Benchmarking of asynchronous functions
+    * Support for Promises
 * High precision benchmark (upto nanoseconds precision)
 
+### Benchmarking of synchronous functions
 ```javascript
 const { benchmark, show } = require('node-microbenchmark');
 
@@ -24,7 +27,23 @@ benchmark(fastFn);
 show();
 ```
 
-![node-microbenchmark](./images/node-microbenchmark.png)
+### Benchmarking of asynchronous functions
+```javascript
+const benchmark = require('../index');
+
+const slowTimer = () => new Promise(res => setTimeout(res, 200));
+const fastTimer = () => new Promise(res => setTimeout(res, 50));
+
+const fn = async () => {
+  await benchmark.benchMarkPromise(slowTimer);
+  await benchmark.benchMarkPromise(fastTimer);
+  benchmark.show();
+};
+
+fn();
+```
+
+<kbd>![node-microbenchmark](https://raw.githubusercontent.com/yashladha/node-microbenchmark/master/images/node-microbenchmark.png)</kbd>
 
 ## Future enhancements
 

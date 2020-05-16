@@ -1,32 +1,7 @@
 const chalk = require('chalk');
 const chalkTable = require('chalk-table');
 const { determineInference } = require('./inference');
-
-const getNano = (ar) => ar[0] * 1e9 + ar[1];
-
-const runner = (func, args) => {
-  const init = getNano(process.hrtime());
-  func.apply(null, args);
-  const ending = getNano(process.hrtime());
-  return {
-    name: func.name,
-    init,
-    ending
-  };
-};
-
-let accumulator = [];
-const iterations = Date.now() % 1000;
-
-function benchMark(func) {
-  const args = [];
-  for (var it = 1; it < arguments.length; ++it)
-    args.push(arguments[it]);
-  for(var idx = 0; idx < iterations; ++idx) {
-    const result = runner(func, args);
-    accumulator.push(result);
-  }
-}
+const { benchMark, benchMarkPromise, accumulator, iterations } = require('./benchmarkers');
 
 const calculate = () => {
   const functions = new Set(accumulator.map(el => el.name));
@@ -76,5 +51,6 @@ const show = () => {
 
 module.exports = {
   benchMark,
+  benchMarkPromise,
   show,
 };
