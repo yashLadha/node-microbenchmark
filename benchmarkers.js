@@ -10,7 +10,7 @@ function captureArgs(args) {
   return _args;
 }
 
-function benchMark(func) {
+function benchmark(func) {
   const args = captureArgs(arguments);
   for(var idx = 0; idx < iterations; ++idx) {
     const result = runner(func, args);
@@ -18,7 +18,7 @@ function benchMark(func) {
   }
 }
 
-async function benchMarkPromise(func) {
+async function benchmarkPromise(func) {
   const args = captureArgs(arguments);
   for (var idx = 0; idx < iterations; ++idx) {
     const result = await runnerPromise(func, args);
@@ -27,8 +27,8 @@ async function benchMarkPromise(func) {
 }
 
 module.exports = {
-  benchMark,
+  benchmark,
   accumulator,
   iterations,
-  benchMarkPromise
+  benchmarkPromise
 };

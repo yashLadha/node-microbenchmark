@@ -4,8 +4,8 @@ const slowTimer = () => new Promise(res => setTimeout(res, 200));
 const fastTimer = () => new Promise(res => setTimeout(res, 50));
 
 const fn = async () => {
-  await benchmark.benchMarkPromise(slowTimer);
-  await benchmark.benchMarkPromise(fastTimer);
+  await benchmark.benchmarkPromise(slowTimer);
+  await benchmark.benchmarkPromise(fastTimer);
   benchmark.show();
 };
 

@@ -30,10 +30,10 @@ const null_with_zero = () => {
   }
 };
 
-benchmark.benchMark(or_with_zero);
-benchmark.benchMark(logical_or_with_zero);
-benchmark.benchMark(string_with_zero);
-benchmark.benchMark(negative_string_with_zero);
-benchmark.benchMark(null_with_zero);
+benchmark.benchmark(or_with_zero);
+benchmark.benchmark(logical_or_with_zero);
+benchmark.benchmark(string_with_zero);
+benchmark.benchmark(negative_string_with_zero);
+benchmark.benchmark(null_with_zero);
 
 benchmark.show();

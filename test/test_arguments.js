@@ -6,7 +6,7 @@ const slowCheck = (val) => {
 
 const fastCheck = () => { return 2; };
 
-benchmark.benchMark(slowCheck, 1e6);
-benchmark.benchMark(fastCheck);
+benchmark.benchmark(slowCheck, 1e6);
+benchmark.benchmark(fastCheck);
 
 benchmark.show();

@@ -1,7 +1,7 @@
 const chalk = require('chalk');
 const chalkTable = require('chalk-table');
 const { determineInference } = require('./inference');
-const { benchMark, benchMarkPromise, accumulator, iterations } = require('./benchmarkers');
+const { benchmark, benchmarkPromise, accumulator, iterations } = require('./benchmarkers');
 
 const calculate = () => {
   const functions = new Set(accumulator.map(el => el.name));
@@ -50,7 +50,7 @@ const show = () => {
 };
 
 module.exports = {
-  benchMark,
-  benchMarkPromise,
+  benchmark,
+  benchmarkPromise,
   show,
 };

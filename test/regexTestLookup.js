@@ -17,7 +17,7 @@ const regMatch = () => {
   }
 };
 
-benchmark.benchMark(regTest);
-benchmark.benchMark(regMatch);
+benchmark.benchmark(regTest);
+benchmark.benchmark(regMatch);
 
 benchmark.show();
