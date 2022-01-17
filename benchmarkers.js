@@ -1,7 +1,15 @@
 const { runner, runnerPromise } = require('./runner');
 
 let accumulator = [];
-const iterations = Date.now() % 1000;
+let iterations = Date.now() % 1000;
+
+function setIterations(numIterations){
+  iterations = numIterations;
+}
+
+function getIterations(){
+  return iterations;
+}
 
 function captureArgs(args) {
   const _args = [];
@@ -27,6 +35,8 @@ async function benchmarkPromise(func) {
 }
 
 module.exports = {
+  getIterations,
+  setIterations,
   benchmark,
   accumulator,
   iterations,
