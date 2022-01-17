@@ -28,7 +28,7 @@ const getSum = (timeBenchData) => {
   return timeBenchData.ending - timeBenchData.init;
 };
 
-const show = () => {
+const show = ({slowerByDecimalPlaces} = {slowerByDecimalPlaces: 0}) => {
   const results = calculate();
   const represent = Object.keys(results)
     .map(key => ({
@@ -36,7 +36,7 @@ const show = () => {
       ns: results[key].average,
       ms: results[key].average / 1e6
     }));
-  determineInference(represent);
+  determineInference(represent, slowerByDecimalPlaces);
   const options = {
      leftPad: 2,
     columns: [
